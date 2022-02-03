@@ -32,11 +32,11 @@ public class PlayerService {
         LOGGER.info("Saving info. Name = {}, Email = {}", name, player.getEmail());
         try {
             Optional<PlayerEntity> playerEntity = Optional.ofNullable(playerRepository.findPlayerEntityByUid(player.getUid()));
-            if(playerEntity.isPresent())
+            if (playerEntity.isPresent())
                 return playerEntity.get();
             player.setName(name);
             return playerRepository.save(player);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new GameException(HttpStatus.BAD_REQUEST, "Unable to save player data", e);
         }
     }
@@ -46,18 +46,18 @@ public class PlayerService {
             int topNthScore = gameRepository.findTopDistinctScoreOffset(4);
             LOGGER.info("Top 5th Score found  = {}", topNthScore);
             return buildGamersList(topNthScore);
-        } catch (Exception e){
-            throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR,"Unable to get Top five games", e);
+        } catch (Exception e) {
+            throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to get Top five games", e);
         }
     }
 
     public List<GameResponse> getTopPlayer(Integer n) throws GameException {
         try {
-            int topNthScore = gameRepository.findTopDistinctScoreOffset(n-1);
+            int topNthScore = gameRepository.findTopDistinctScoreOffset(n - 1);
             LOGGER.info("Top {}th Score found  = {}", n, topNthScore);
             return buildGamersList(topNthScore);
-        } catch (Exception e){
-            throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR,"Unable to get Top five games", e);
+        } catch (Exception e) {
+            throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to get Top five games", e);
         }
     }
 
@@ -66,7 +66,7 @@ public class PlayerService {
         List<GameEntity> gameEntities;
         try {
             gameEntities = gameRepository.findTopPlayers(topNthScore);
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR, "Error occured while retrieving top values", e);
         }
         for (GameEntity gameEntity : gameEntities) {

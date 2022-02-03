@@ -30,13 +30,11 @@ import java.util.Map;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    public SecurityFilter tokenAuthenticationFilter;
+    @Autowired
     ObjectMapper objectMapper;
-
     @Autowired
     SecurityProperties restSecProps;
-
-    @Autowired
-    public SecurityFilter tokenAuthenticationFilter;
 
     @Bean
     public AuthenticationEntryPoint restAuthenticationEntryPoint() {

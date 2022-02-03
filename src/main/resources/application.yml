@@ -68,7 +68,7 @@ security:
     - /public/**
     - /actuator/**
     - /swagger/**
-    - /player/get/
+    - /score/**
     - /h2-console/**
   exposed-headers:
     - X-Xsrf-Token

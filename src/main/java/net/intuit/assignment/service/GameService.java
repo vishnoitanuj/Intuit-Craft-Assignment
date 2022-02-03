@@ -28,7 +28,7 @@ public class GameService {
         PlayerEntity playerEntity;
         try {
             playerEntity = playerRepository.findPlayerEntityByUid(player.getUid());
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new GameException(HttpStatus.UNPROCESSABLE_ENTITY, "Unrecognised User", e);
         }
         LOGGER.info("Submitting score for player = {}, Score = {}", player.getName(), score);
@@ -43,7 +43,7 @@ public class GameService {
                     .playerScore(score)
                     .gameId(submittedGame.getId())
                     .build();
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new GameException(HttpStatus.INTERNAL_SERVER_ERROR, "Could not save player scores", e);
         }
     }

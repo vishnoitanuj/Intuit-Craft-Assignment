@@ -2,7 +2,6 @@ package net.intuit.assignment.controller;
 
 import net.intuit.assignment.entity.PlayerEntity;
 import net.intuit.assignment.exception.GameException;
-import net.intuit.assignment.model.GameRequest;
 import net.intuit.assignment.model.GameResponse;
 import net.intuit.assignment.service.GameService;
 import org.slf4j.Logger;
@@ -10,7 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.invoke.MethodHandles;
 
