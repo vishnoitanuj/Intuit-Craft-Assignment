@@ -3,7 +3,6 @@ package net.intuit.assignment.service;
 import net.intuit.assignment.entity.GameEntity;
 import net.intuit.assignment.entity.PlayerEntity;
 import net.intuit.assignment.exception.GameException;
-import net.intuit.assignment.model.GameRequest;
 import net.intuit.assignment.model.GameResponse;
 import net.intuit.assignment.repository.GameRepository;
 import net.intuit.assignment.repository.PlayerRepository;
