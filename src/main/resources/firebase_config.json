@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "intuit-craft-3a291",
+  "private_key_id": "ffc821faeec1bea20cd10848360070905dc2c5d0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCuTTUo6j+0NUyT\nYEfrcQvRDazUC0RaGtZqR/PUn+IgnsFaUOVjkKv5vZebP+Bt9rTJba/iUwALY5LD\nYybfQFGZF8NCmMa8uI4TMPVhCTq+aQ6B7hO8RiYvIiSJTXqaYyzT0scemIF42gi2\ncBYuDpNsExA8irE9CHHCcDDIL8p8jA4foFBZNgS0U4UbIiAY4fZT8iOotTcUZPSd\nzn4PVrehnVBX2nVXreTai2hwo8K9m9kHCR83Mqbuh5Uv81IVkMDVokJiGGCeniue\nwgSJuLYDnjpgdiNv+719vNQKU07Hmhu1ssNu9WI+Rq2LEk8wVPR0Xa6Z4hw2H32D\n0IZr+RxnAgMBAAECggEADXL4p0ZikaRL2yf331iy2Y0ivkkmRjDsRXl1fNJfZOFL\nDbh7PVz+4BTQe2gI3a3xEi/L/VHRNDpugHQInlD8sCw6DUvziGv8eR+dzMB6ZLx/\neZK7ZBt3kSB4eD20YvBEbQ3GU9E0VZ+2l2PRBPnBR1ALQINPx2P86cy1VDpXzJdI\npQXwzVFBdQQHnM/cMjglxD1VKMlRwXzRE7oBgwO8sAwoyI0Xv9KqTb/PFIVqdIxV\necFa0X2sHa1bMGFKywjJOtTTa9mI2sJUh//qGBBmwNj2rwn8XpmyKvEmFtBOxkiD\nrA0HcAMtk71gXj3ef4/omUllufZ+rn0F3Yphgr7RyQKBgQDelfqZs+C1ql3PFG5M\nDpQcAg6U1uh5QGkkTcGtP6afF8wAtabsnadczVxwlB5jg1MzGHIlp0cICfd4YGW2\nyltG4QNWxxbN91Z5xcatmf0Wwafciq/t9s2p2vjr/IQb4/OlB8a0FcV3aN2EPPGe\nE4Ub9064hlEws3WbZQH5H437SQKBgQDId6eHJZzrkJRjIu97ASYjeDtjYKv8O4yl\nt+b0C4FM0bIESyib+glCPpquPJB+Y4/ZtT2eZ1HpH9775JA0e+wvF74zs+667WK/\nTjKB14SI8efPdjY4aeWAUdwPrZGgXDtV+Pz4GeaOyzzTXS9YDO/3nNv7TD735bvl\naomDqj4qLwKBgQCAumBaMAuPRN5H+trnJa9Gm3HvZnLAXR3xnv6ZwawNamfTKTtG\nsM6v/xytBxykFLkzXbn2SM3tukXi2m04z8MGNPAHadCogZkDh/wlPl9+n7UC+TpR\n92BuEXPQlxOYRbcNBHhIgibXrlAeQFjEQSnESLzAPv4JmmAz5LDFcRhd8QKBgAej\nT3W9wCHVi2HPlfJI0+wsC484wrTEjBJQVHNd8No9bxvsxSpUN4AXpIsY8aRvJK71\n0dg0NZG9TiCoz7nAMvqEXBHaPDFRFB8X2qLJ1FnnZZ6o8V3q4vyloc3THiZO/U/E\nQdcuHXO5WKLw/PnM3GPBzTvg5tFJJoSSL5UdqmqvAoGBAJ7mvOU3Zi2a30tcWz5M\nNFtstLxmlMpcfMfXRSTrZKYRASQQNxpUaHgw0TOr/G9fD2TVXNIsUaSGEumdmwou\nOCb27j4d77YIB82RvclaOd0tyggsISyHh8rr4S/Is1bpUmsSUfjZ8kbF9L8/aFXT\nUFj8o80m2oGTdzLquIVdAkwu\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-nrxnk@intuit-craft-3a291.iam.gserviceaccount.com",
+  "client_id": "107744908562104909988",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nrxnk%40intuit-craft-3a291.iam.gserviceaccount.com"
+}
