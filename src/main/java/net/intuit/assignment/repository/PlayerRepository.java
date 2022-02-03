@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PlayerRepository extends JpaRepository<PlayerEntity, Long> {
     PlayerEntity findPlayerEntityById(Long id);
-    PlayerEntity findPlayerEntityByUserId(String userId);
+    PlayerEntity findPlayerEntityByUid(String uid);
 }

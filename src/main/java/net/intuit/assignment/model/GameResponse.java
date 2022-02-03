@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class GameResponse {
 
+    private Long gameId;
     private String playerName;
     private Double playerScore;
 }

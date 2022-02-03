@@ -25,7 +25,7 @@ public class GameEntity implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Player_Id", referencedColumnName = "ID")
+    @JoinColumn(name = "Player_id", referencedColumnName = "ID")
     private PlayerEntity player;
 
     @Column(name = "SCORE")

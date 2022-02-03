@@ -1,8 +1,8 @@
 package net.intuit.assignment.security;
 
+import net.intuit.assignment.entity.PlayerEntity;
 import net.intuit.assignment.model.authorization.Credentials;
 import net.intuit.assignment.model.authorization.SecurityProperties;
-import net.intuit.assignment.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,12 +23,12 @@ public class SecurityService {
     @Autowired
     private SecurityProperties securityProperties;
 
-    public User getUser() {
-        User userPrincipal = null;
+    public PlayerEntity getUser() {
+        PlayerEntity userPrincipal = null;
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Object principal = securityContext.getAuthentication().getPrincipal();
-        if (principal instanceof User) {
-            userPrincipal = ((User) principal);
+        if (principal instanceof PlayerEntity) {
+            userPrincipal = ((PlayerEntity) principal);
         }
         return userPrincipal;
     }

@@ -9,6 +9,10 @@ import java.util.List;
 
 @Repository
 public interface GameRepository extends JpaRepository<GameEntity, Long> {
-    @Query(value = "SELECT * from GAME ORDER BY SCORE DESC LIMIT 5", nativeQuery = true)
-    List<GameEntity> findTop5();
+
+    @Query(value = "SELECT DISTINCT SCORE from GAME ORDER BY SCORE DESC LIMIT 1 OFFSET :n", nativeQuery = true)
+    Integer findTopDistinctScoreOffset(Integer n);
+
+    @Query(value = "SELECT * from GAME WHERE SCORE >= :s ORDER BY SCORE DESC", nativeQuery = true)
+    List<GameEntity> findTopPlayers(Integer s);
 }

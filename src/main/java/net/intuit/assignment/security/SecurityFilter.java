@@ -4,9 +4,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseToken;
 import lombok.extern.slf4j.Slf4j;
+import net.intuit.assignment.entity.PlayerEntity;
 import net.intuit.assignment.model.authorization.Credentials;
 import net.intuit.assignment.model.authorization.SecurityProperties;
-import net.intuit.assignment.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -49,7 +49,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         boolean strictServerSessionEnabled = securityProps.getFirebaseProps().isEnableStrictServerSession();
         Cookie sessionCookie = cookieUtils.getCookie("session");
         String token = securityService.getBearerToken(request);
-        logger.info(token);
+//        logger.info(token);
         try {
             if (sessionCookie != null) {
                 session = sessionCookie.getValue();
@@ -66,27 +66,27 @@ public class SecurityFilter extends OncePerRequestFilter {
             e.printStackTrace();
             log.error("Firebase Exception:: {}", e.getLocalizedMessage());
         }
-        User user = firebaseTokenToUserDto(decodedToken);
-        if (user != null) {
-            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user,
+        PlayerEntity player = firebaseTokenToUserDto(decodedToken);
+        if (player != null) {
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(player,
                     new Credentials(type, decodedToken, token, session), null);
             authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
     }
 
-    private User firebaseTokenToUserDto(FirebaseToken decodedToken) {
-        User user = null;
+    private PlayerEntity firebaseTokenToUserDto(FirebaseToken decodedToken) {
+        PlayerEntity player = null;
         if (decodedToken != null) {
-            user = new User();
-            user.setUid(decodedToken.getUid());
-            user.setName(decodedToken.getName());
-            user.setEmail(decodedToken.getEmail());
-            user.setPicture(decodedToken.getPicture());
-            user.setIssuer(decodedToken.getIssuer());
-            user.setEmailVerified(decodedToken.isEmailVerified());
+            player = new PlayerEntity();
+            player.setUid(decodedToken.getUid());
+            player.setName(decodedToken.getName());
+            player.setEmail(decodedToken.getEmail());
+            player.setPicture(decodedToken.getPicture());
+            player.setIssuer(decodedToken.getIssuer());
+            player.setEmailVerified(decodedToken.isEmailVerified());
         }
-        return user;
+        return player;
     }
 
 }

@@ -6,19 +6,19 @@ import org.springframework.http.HttpStatus;
 @Data
 public class GameException extends Exception{
 
-    public final int code;
+    public final HttpStatus code;
 
     public GameException(String message){
         super(message);
-        this.code = HttpStatus.INTERNAL_SERVER_ERROR.value();
+        this.code = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
-    public GameException(Integer code, String message, Throwable cause){
+    public GameException(HttpStatus code, String message, Throwable cause){
         super(message, cause);
         this.code = code;
     }
 
-    public GameException(Integer code, String message){
+    public GameException(HttpStatus code, String message){
         super(message);
         this.code = code;
     }
